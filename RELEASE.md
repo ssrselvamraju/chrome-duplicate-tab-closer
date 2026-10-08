@@ -2,7 +2,7 @@
 
 1. Run tests and packaging. Complete the manual checklist in VALIDATION.md, including actual unpacked Chrome operation. Review the complete Git history and package for private data and unexpected permissions/network behavior.
 2. Keep the dedicated repository private until checks pass. Then change it to public, enable private vulnerability reporting, and verify public source access while signed out.
-3. Configure GitHub Pages: Settings → Pages → Deploy from a branch → main → /docs. The privacy URL will be `https://ssrselvamraju.github.io/duplicate-tab-closer/privacy.html`; verify it is live before using it in the store. No analytics should be enabled on that page.
+3. Configure GitHub Pages: Settings → Pages → Deploy from a branch → main → /docs. The privacy URL will be `https://ssrselvamraju.github.io/chrome-duplicate-tab-closer/privacy.html`; verify it is live before using it in the store. No analytics should be enabled on that page.
 4. Commit final source, tag `v1.0.0` only when release-ready, and publish a GitHub release with the exact `dist/duplicate-tab-closer-1.0.0.zip` and `.sha256` file. Use a release-candidate tag while manual verification remains incomplete.
 5. Use the owner's Chrome Web Store developer account. The owner handles registration fee payment, agreements, and any account verification. Do not disclose private account details in the repository.
 6. Upload the ZIP. Use store/LISTING.md, icons/icon128.png, store/promo-440x280.png, and the 640×400 screenshots. The full-height popup-preview.png is documentation artwork, not a store-sized screenshot. Confirm current dashboard asset requirements.

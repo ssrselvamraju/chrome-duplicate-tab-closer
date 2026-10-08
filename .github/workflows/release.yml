@@ -1,0 +1,25 @@
+name: Package release candidate
+on:
+  push:
+    tags:
+      - 'v*-rc.*'
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: node --test tests/*.test.js
+      - run: node --check popup.js
+      - run: python3 scripts/package.py
+      - name: Publish candidate ZIP and checksum
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: gh release create "$RELEASE_TAG" dist/*.zip dist/*.sha256 --verify-tag --prerelease --title "Duplicate Tab Closer $RELEASE_TAG" --notes-file store/RELEASE-NOTES.md

@@ -28,7 +28,7 @@ const info=await popup.evaluate(async()=>{
   const win=await chrome.windows.create({url:'https://a.example.test/second',focused:false});
   const first=win.tabs[0];await chrome.tabs.update(first.id,{pinned:true});
   const second=await chrome.tabs.create({url:'https://a.example.test/second',active:false});
-  
+
   return {first:first.id,second:second.id};
 });
 await popup.locator('#refresh').click();await popup.waitForFunction(()=>document.getElementById('extras').textContent==='1');

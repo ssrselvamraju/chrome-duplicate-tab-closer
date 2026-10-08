@@ -56,4 +56,4 @@ The Python standard-library packaging script creates a deterministic ZIP and SHA
 
 ## Support
 
-File a [GitHub issue](https://github.com/ssrselvamraju/duplicate-tab-closer/issues) using redacted or synthetic examples. For vulnerabilities, follow [SECURITY.md](SECURITY.md). The maintainer does not receive browsing information automatically.
+File a [GitHub issue](https://github.com/ssrselvamraju/chrome-duplicate-tab-closer/issues) using redacted or synthetic examples. For vulnerabilities, follow [SECURITY.md](SECURITY.md). The maintainer does not receive browsing information automatically.

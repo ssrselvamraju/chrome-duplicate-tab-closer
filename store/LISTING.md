@@ -20,7 +20,7 @@ Privacy: open-tab URLs, titles, and tab status are processed only in popup memor
 
 Closing tabs can lose unsaved work. Google file matching merges different views of a file; matching titles alone do not prove the same page. Pinned and active tabs are included. Review the preview before closing.
 
-Apache 2.0 open source. Source/support: https://github.com/ssrselvamraju/duplicate-tab-closer
+Apache 2.0 open source. Source/support: https://github.com/ssrselvamraju/chrome-duplicate-tab-closer
 Privacy policy: use the verified live GitHub Pages policy URL before submission.
 
 ## Privacy Practices and reviewer notes
