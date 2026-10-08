@@ -13,7 +13,7 @@ Struggling to keep up with your 400+ open Chrome tabs? Worried that many are dup
 3. Choose **Load unpacked** and select the folder containing `manifest.json`.
 4. Pin Duplicate Tab Closer using Chrome's Extensions menu, then click its icon.
 
-Chrome Web Store publication is pending; no store installation link is available yet. This source release is a candidate until the manual extension checklist in [VALIDATION.md](VALIDATION.md) is completed.
+Chrome Web Store publication is pending; no store installation link is available yet. This source release is a candidate for store submission until the manual checklist in [VALIDATION.md](VALIDATION.md) is completed.
 
 ## How it works
 

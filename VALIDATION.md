@@ -8,12 +8,14 @@
 - Standard-library allowlisted ZIP packaging and checksum generation pass. Runtime includes the local privacy policy, Apache LICENSE, NOTICE, and bundled icons.
 - Synthetic screenshots visually reviewed for readable text and exact/amber group separation. These are production UI screenshots with mocked tab metadata, not personal browsing data.
 
-## Remaining release gates
+- Actual unpacked Chrome 154 extension loaded using Chrome's supported Extensions.loadUnpacked debugging API in a disposable regular profile. Real tabs query, exact/title grouping, keeper preservation, global/fuzzy removal, multiple windows, pinned tabs, offline refresh, popup reopening with auto-refresh reset, tabs-only manifest, and no extension-page HTTP requests pass. Incognito exclusion was verified.
 
-- Actual unpacked-extension Chrome API and permissions validation is pending. This browser's command-line extension loading did not register the extension; fixture-based UI tests do not establish installed-extension integration.
-- Verify actual action-popup size/scrolling and keyboard focus, multi-window tab removal, memory-saver tabs, restored pending tabs, popup closing/reopening, pinned/active indicators, and Chrome extension error panel in a dedicated test profile.
-- Inspect network activity in the installed extension while offline and confirm only intentional external privacy/support navigation can open a network page.
-- Confirm GitHub public visibility, live privacy URL, owner support channel, and the full packaged release before public store submission.
+## Remaining store release gates
+
+- A headless Chrome crash occurred when exercising native tab discard. Sleeping-tab behavior passes synthetic/core tests; manually verify memory-saver tabs in a normal browser before store launch.
+- Verify actual toolbar action-popup size/scrolling, keyboard focus, restored pending tabs, and the Chrome extension error panel in a normal dedicated profile. Multi-window removal, pinned indicators, and popup reopening already pass integration tests.
+- Offline installed-extension refresh and absence of outbound popup requests pass; verify intentional privacy/support link navigation in the normal browser.
+- Confirm live privacy URL, public source visibility, private vulnerability reporting, and the packaged release before public store submission.
 - Chrome Web Store publisher registration, fee/agreement/verification as applicable, submission, review, and publication remain owner/account-dependent.
 
 Optional fixture UI check: install Playwright only in your development environment and run `node tests/browser-check.cjs` with CHROME_PATH set if necessary. It regenerates synthetic screenshots and does not require Playwright in the extension package.
